@@ -5,6 +5,16 @@ public class ExceptionProblemTwo {
     {
         return string.charAt(string.length());
     }
+    public static void stringIndexOutOfBoundHandler(String string) {
+
+        try{
+            char stringIndexOutOfBound = stringIndexOutOfBound(string);
+        }
+        catch(StringIndexOutOfBoundsException e)
+        {
+            System.out.println(e + " is found");
+        }
+    }
     public static void main(String args[])
     {
         Scanner input = new Scanner(System.in);
@@ -17,5 +27,6 @@ public class ExceptionProblemTwo {
         {
             System.out.println(e + " is found");
         }
+        stringIndexOutOfBoundHandler(string);
     }
 }
